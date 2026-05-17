@@ -17,10 +17,12 @@ app.add_middleware(
 #client = MongoClient(os.environ["MONGO_URI"])
 
 # Conexión al clúster con tus credenciales reales y base de datos personal
-client = MongoClient("mongodb://ISIS2304I20202610:bhh8sK3O0Gcr@157.253.236.88:8087/ISIS2304I20202610")
-db = client["ISIS2304I20202610"]
+#client = MongoClient("mongodb://ISIS2304I20202610:bhh8sK3O0Gcr@157.253.236.88:8087/ISIS2304I20202610")
+#db = client["ISIS2304I20202610"]
+client = MongoClient("mongodb+srv://hrcorzosebas_db_user:Corzo_123@juanse.ufjmrds.mongodb.net/?appName=juanse")
+db = client["parranderos"]
 
-
+#mongodb+srv://hrcorzosebas_db_user:Corzo_123@juanse.ufjmrds.mongodb.net/?appName=juanse
 @app.get("/")
 def inicio():
     return {"estado": "API funcionando correctamente"}
